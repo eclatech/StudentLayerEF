@@ -1,4 +1,5 @@
-﻿@model IEnumerable<StudentObjects.Student>
+﻿@using StudentCommon
+@model IEnumerable<StudentObjects.Student>
 @{
     ViewBag.Title = "List of all Students";
 }
@@ -24,7 +25,7 @@
                 @Html.DisplayFor(modelItem => item.LastName)
             </td>
             <td>
-                @Html.ActionLink("Edit","Update","Student",new { id = item.StudentId }, null)
+                @Html.ActionLink("Edit","Update","Student",new { id = item.StudentId.EncryptNumber() }, null)
             </td>
         </tr>
             }

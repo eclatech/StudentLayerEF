@@ -1,0 +1,18 @@
+﻿@model StudentObjects.User
+
+@{
+    Layout = null;
+}
+
+@using(Html.BeginForm())
+{
+    <div>
+        @Html.DisplayFor(m => m.UserName)
+        @Html.TextBoxFor(m => m.UserName)
+        
+        @Html.DisplayFor(m => m.Password)
+        @Html.TextBoxFor(m => m.Password)
+
+        <input type="submit" />
+    </div>
+}
