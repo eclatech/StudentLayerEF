@@ -1,0 +1,22 @@
+﻿@model StudentObjects.Student
+
+@{
+    Layout = null;
+}
+
+
+@using(Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(m => m.FirstName)
+        @Html.TextBoxFor(m => m.FirstName)
+        
+        @Html.LabelFor(m => m.LastName)
+        @Html.TextBoxFor(m => m.LastName)
+        
+        @Html.HiddenFor(m => m.StudentId)
+        @Html.HiddenFor(m => m.EnrollmentDate)
+
+        <input type="submit" />
+    </div>
+}
